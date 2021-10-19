@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!--unicode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--config dispos. móvel-->
+    <link rel="stylesheet" type="text/css" href="formularioComCSS.CSS" media="screen"> <!--fazendo link do html com css-->
+    <title>Cadastro</title>
+</head>
+<body>
+    <div> <!--todas as divs terão a mesma estilização-->
+        <h1 id="titulo"> Trabalhe conosco </h1>
+        <p id="subtitulo">Complete as informações</p>
+        <br>
+    </div>
+    
+    <form>
+        <fieldset class="grupo"> <!--agrupador de campos-->
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label> <!--explicação do campo-->
+                <input type="text" name="nome" id="nome" required> <!--entrada de valor e required=campo obrigatório-->
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+
+        </fieldset>
+
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label> 
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label><strong>Qual lado da aplicação você desenvolve?</strong></label>
+            <label>
+                <input type="radio" name="devweb" value="frontend" checked> Front-end <!--radio button e check deixar seleconado-->
+
+            <label>
+                <input type="radio" name="devweb" value="backend"> Back-end
+            </label>
+
+            <label>
+                <input type="radio" name="devweb" value="fullstack"> Fullstack
+            </label>
+        </div>
+    </form>
+
+    <div class="campo">
+        <label for="senioridade"><strong>Natureza do cargo</strong></label>
+        <label>
+            <select id="senioridade" required> <!--opção para selecionar-->
+                <option selected disabled value="">Selecione</option> <!--campo selecionado desabilitado e sem valor-->
+                <option>Junior</option>
+                <option>Pleno</option>
+                <option>Senior</option>
+
+            </select>
+        </label>
+    </div>
+
+    <fieldset class="grupo">
+
+        <div id="check">
+
+            <label><strong>Área de interesse:</strong></label><br><br>
+            <input type="checkbox" id="tecnolog1" name="tecnolog1" value="HTML">
+            <label for="tecnolog1">HTML</label>
+            <input type="checkbox" id="tecnolog2" name="tecnolog2" value="CSS">
+            <label for="tecnolog1">CSS</label>
+            <input type="checkbox" id="tecnolog3" name="tecnolog3" value="Javascript">
+            <label for="tecnolog1">Javascript</label>
+            <input type="checkbox" id="tecnolog4" name="tecnolog4" value="PHP">
+            <label for="tecnolog1">PHP</label>
+            <input type="checkbox" id="tecnolog5" name="tecnolog5" value="C#">
+            <label for="tecnolog1">C#</label>
+            <input type="checkbox" id="tecnolog6" name="tecnolog6" value="Python">
+            <label for="tecnolog1">Python</label>
+            <input type="checkbox" id="tecnolog7" name="tecnolog7" value="Java">
+            <label for="tecnolog1">Java</label>
+        </div>
+    </fieldset>
+
+    <div class="campo">
+        <br>
+        <label><strong> Conte um pouco sobre sua experiência</strong></label>
+        <textarea row="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+    </div>
+    <button class="botao" type="submit" onsubmit="">Enviar</button>
+    
+</body>
+</html>
